@@ -1,0 +1,17 @@
+Pour améliorer la précision des prédictions et obtenir des résultats pour toutes les personnes, vous pouvez utiliser une approche de validation croisée et calculer l'écart moyen entre les prédictions et les valeurs réelles. Voici comment vous pouvez procéder :
+
+Validation croisée (Cross-validation) : Utilisez une technique de validation croisée, comme la validation croisée k-fold, pour évaluer les performances du modèle sur l'ensemble des données.
+
+Prédiction pour toutes les personnes : Une fois le modèle entraîné, effectuez des prédictions pour toutes les personnes dans l'ensemble de données, pas seulement sur un échantillon.
+
+Calcul de l'écart moyen : Comparez les prédictions du modèle avec les valeurs réelles pour chaque personne et calculez l'écart moyen (par exemple, l'erreur absolue moyenne) pour évaluer la précision du modèle.
+
+Comparaison avec le Dummy Regressor : Comparez également les performances de votre modèle avec celles d'un Dummy Regressor en calculant l'écart moyen pour ce modèle basique.
+
+Voici comment vous pouvez implémenter cela dans votre code :
+
+Utilisez une technique de validation croisée pour évaluer les performances du modèle.
+Effectuez des prédictions pour toutes les personnes dans l'ensemble de données.
+Calculez l'écart moyen entre les prédictions et les valeurs réelles.
+Comparez les performances avec celles d'un Dummy Regressor en calculant l'écart moyen pour ce modèle.
+
