@@ -44,7 +44,7 @@ scaler = StandardScaler()
 features_scaled = scaler.fit_transform(features)
 
 error=[]
-for i in range(10):
+for i in range(60):
     # Division des données en ensembles d'entraînement et de test
     X_train, X_test, y_train, y_test = train_test_split(features_scaled, target, test_size=0.3, random_state=i)
 
@@ -100,7 +100,7 @@ scaler = StandardScaler()
 features_scaled = scaler.fit_transform(features)
 
 error_2=[]
-for i in range(10):
+for i in range(60):
     # Division des données en ensembles d'entraînement et de test
     X_train, X_test, y_train, y_test = train_test_split(features_scaled, target, test_size=0.3, random_state=i)
 
@@ -155,7 +155,7 @@ scaler = StandardScaler()
 features_scaled = scaler.fit_transform(features)
 
 error_3=[]
-for i in range(10):
+for i in range(60):
     # Division des données en ensembles d'entraînement et de test
     X_train, X_test, y_train, y_test = train_test_split(features_scaled, target, test_size=0.3, random_state=i)
 

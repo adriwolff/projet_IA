@@ -49,12 +49,12 @@ features_scaled = scaler.fit_transform(features)
 
 error=[]
 error_accurate=[]
-for i in range(20):
+for i in range(60):
     # Division des données en ensembles d'entraînement et de test
     X_train, X_test, y_train, y_test = train_test_split(features_scaled, target, test_size=0.3, random_state=i)
 
     # Modèle de régression linéaire
-    lr = SVR(C=10, epsilon=0.1, kernel='sigmoid', gamma=0.01)
+    lr = SVR()#C=10, epsilon=0.1, kernel='sigmoid', gamma=0.01)
     lr.fit(X_train, y_train)
     y_pred_lr = lr.predict(X_test)
 
@@ -131,12 +131,12 @@ features_scaled = scaler.fit_transform(features)
 
 error_2=[]
 error_accurate_2=[]
-for i in range(20):
+for i in range(60):
     # Division des données en ensembles d'entraînement et de test
     X_train, X_test, y_train, y_test = train_test_split(features_scaled, target, test_size=0.3, random_state=i)
 
     # Modèle de régression linéaire
-    lr = SVR(C=10, epsilon=0.01, kernel='rbf', gamma=0.01)
+    lr = SVR()#=10, epsilon=0.01, kernel='rbf', gamma=0.01
     lr.fit(X_train, y_train)
     y_pred_lr = lr.predict(X_test)
 
@@ -214,12 +214,12 @@ features_scaled = scaler.fit_transform(features)
 
 error_3=[]
 error_accurate_3=[]
-for i in range(20):
+for i in range(60):
     # Division des données en ensembles d'entraînement et de test
     X_train, X_test, y_train, y_test = train_test_split(features_scaled, target, test_size=0.3, random_state=i)
 
     # Modèle de régression linéaire
-    lr = SVR(C=10, epsilon=0.1, kernel='rbf', gamma=0.01)
+    lr = SVR()#C=10, epsilon=0.1, kernel='rbf', gamma=0.01)
     lr.fit(X_train, y_train)
     y_pred_lr = lr.predict(X_test)
 
