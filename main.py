@@ -5,7 +5,8 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.dummy import DummyRegressor
-from sklearn.metrics import mean_absolute_error, root_mean_squared_error
+from sklearn.metrics import mean_absolute_error
+from sklearn.metrics import mean_squared_error as root_mean_squared_error
 import math
 
 # Chargement des données
@@ -33,60 +34,7 @@ for participant in participants:
         essais_necessaires.append({'ID': participant, 'Nombre_Essais': participant_data['Essai'].max() + 1})
 
 essais_necessaires_df = pd.DataFrame(essais_necessaires)
-#print ("Nb d'essais nécessaires par participants:\n", essais_necessaires_df)
-
-"""
-
-# Fusionner avec les données originales pour obtenir les caractéristiques des premiers essais
-first_trials = data[data['Essai'] == 1]
-merged_data = pd.merge(first_trials, essais_necessaires_df, on='ID')
-
-# Affichage des premières lignes du dataframe fusionné
-print(merged_data.head())
-
-
-
-# Sélection des caractéristiques pertinentes
-features = merged_data.drop(columns=['ID', 'Proposition_Phase', 'Essai', 'Nombre_Essais'])
-target = merged_data['Nombre_Essais']
-
-# Normalisation des données
-scaler = StandardScaler()
-features_scaled = scaler.fit_transform(features)
-
-
-# Division des données en ensembles d'entraînement et de test
-X_train, X_test, y_train, y_test = train_test_split(features_scaled, target, test_size=0.2, random_state=42)
-
-# Modèle de régression linéaire
-lr = LinearRegression()
-lr.fit(X_train, y_train)
-y_pred_lr = lr.predict(X_test)
-
-# Dummy Regressor
-dummy = DummyRegressor(strategy='mean')
-dummy.fit(X_train, y_train)
-y_pred_dummy = dummy.predict(X_test)
-
-# Évaluation des performances
-print("Linear Regression MAE:", mean_absolute_error(y_test, y_pred_lr))
-print("Linear Regression RMSE:", root_mean_squared_error(y_test, y_pred_lr))
-print("Dummy Regressor MAE:", mean_absolute_error(y_test, y_pred_dummy))
-print("Dummy Regressor RMSE:", root_mean_squared_error(y_test, y_pred_dummy))
-
-
-# Affichage des prédictions par ID pour le test set
-index_test = merged_data.index[range(len(X_test))]
-predictions_df = pd.DataFrame({
-    'ID': merged_data.loc[index_test, 'ID'],
-    'Nombre Essais Prédit': y_pred_lr
-})
-
-print("Prédictions par ID:")
-print(predictions_df.head())
-
-"""
-
+print ("Nb d'essais nécessaires par participants:\n", essais_necessaires_df)
 
 # Fonction de prédiction
 def predict_with_trials(num_trials):
@@ -105,7 +53,7 @@ def predict_with_trials(num_trials):
     features_scaled = scaler.fit_transform(features)
 
     # Division des données en ensembles d'entraînement et de test
-    X_train, X_test, y_train, y_test = train_test_split(features_scaled, target, test_size=0.2, random_state=42)
+    X_train, X_test, y_train, y_test = train_test_split(features_scaled, target, test_size=0.2)
 
     # Modèle de régression linéaire
     lr = LinearRegression()
@@ -125,7 +73,10 @@ def predict_with_trials(num_trials):
 
     # Récupération des IDs correspondants
     test_indices = merged_data.index[len(X_test)]
-    ids_test = merged_data.loc[test_indices, 'ID']
+    ids_test = []
+    for i in range(test_indices):
+        ids_test.append(merged_data.loc[i, 'ID'])
+    print(ids_test)
 
     return lr_mae, lr_rmse, dummy_mae, dummy_rmse, ids_test, y_test, y_pred_lr, y_pred_dummy
 
@@ -142,7 +93,7 @@ def predict_time(num_trials):
     features_scaled = scaler.fit_transform(features)
 
     # Division des données en ensembles d'entraînement et de test
-    X_train, X_test, y_train, y_test = train_test_split(features_scaled, target, test_size=0.2, random_state=42)
+    X_train, X_test, y_train, y_test = train_test_split(features_scaled, target, test_size=0.2)
 
     # Modèle de régression linéaire
     lr = LinearRegression()

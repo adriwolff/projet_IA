@@ -15,3 +15,46 @@ Effectuez des prédictions pour toutes les personnes dans l'ensemble de données
 Calculez l'écart moyen entre les prédictions et les valeurs réelles.
 Comparez les performances avec celles d'un Dummy Regressor en calculant l'écart moyen pour ce modèle.
 
+params 1:
+Meilleurs paramètres: {'C': 10, 'epsilon': 0.001, 'gamma': 'auto', 'kernel': 'rbf'}
+Meilleurs paramètres: {'C': 1, 'epsilon': 0.001, 'gamma': 'scale', 'kernel': 'rbf'}
+Meilleurs paramètres: {'C': 1000, 'epsilon': 1, 'gamma': 0.001, 'kernel': 'sigmoid'}
+Meilleurs paramètres: {'C': 1, 'epsilon': 0.1, 'gamma': 'auto', 'kernel': 'sigmoid'}
+Meilleurs paramètres: {'C': 100, 'epsilon': 1, 'gamma': 0.1, 'kernel': 'rbf'}
+Meilleurs paramètres: {'C': 10, 'epsilon': 0.1, 'gamma': 0.01, 'kernel': 'rbf'}
+Meilleurs paramètres: {'C': 10, 'epsilon': 0.1, 'gamma': 0.01, 'kernel': 'rbf'}
+Meilleurs paramètres: {'C': 0.1, 'epsilon': 0.1, 'gamma': 10, 'kernel': 'sigmoid'}
+Meilleurs paramètres: {'C': 1, 'epsilon': 0.1, 'gamma': 'auto', 'kernel': 'sigmoid'}
+Meilleurs paramètres: {'C': 1, 'epsilon': 1, 'gamma': 'scale', 'kernel': 'sigmoid'}
+Meilleurs paramètres: {'C': 10, 'epsilon': 0.001, 'gamma': 0.01, 'kernel': 'sigmoid'}
+Meilleurs paramètres: {'C': 0.1, 'epsilon': 1, 'gamma': 10, 'kernel': 'sigmoid'}
+Meilleurs paramètres: {'C': 1000, 'epsilon': 1, 'gamma': 0.001, 'kernel': 'rbf'}
+Meilleurs paramètres: {'C': 1, 'epsilon': 0.1, 'gamma': 0.1, 'kernel': 'sigmoid'}
+Meilleurs paramètres: {'C': 1, 'epsilon': 1, 'gamma': 0.1, 'kernel': 'sigmoid'}
+Meilleurs paramètres: {'C': 0.1, 'epsilon': 0.01, 'gamma': 10, 'kernel': 'sigmoid'}
+Meilleurs paramètres: {'C': 10, 'epsilon': 0.001, 'gamma': 0.01, 'kernel': 'rbf'}
+Meilleurs paramètres: {'C': 0.1, 'epsilon': 0.1, 'gamma': 10, 'kernel': 'sigmoid'}
+Meilleurs paramètres: {'C': 10, 'epsilon': 1, 'gamma': 'scale', 'kernel': 'rbf'}
+Meilleurs paramètres: {'C': 10, 'epsilon': 0.1, 'gamma': 'scale', 'kernel': 'linear'}
+
+Params2 :
+
+Meilleurs paramètres: {'C': 1, 'epsilon': 0.01, 'gamma': 'scale', 'kernel': 'rbf'}
+Meilleurs paramètres: {'C': 100, 'epsilon': 0.01, 'gamma': 0.01, 'kernel': 'rbf'}
+Meilleurs paramètres: {'C': 1, 'epsilon': 0.1, 'gamma': 0.1, 'kernel': 'sigmoid'}
+Meilleurs paramètres: {'C': 10, 'epsilon': 1, 'gamma': 'auto', 'kernel': 'rbf'}
+Meilleurs paramètres: {'C': 10, 'epsilon': 1, 'gamma': 0.001, 'kernel': 'rbf'}
+Meilleurs paramètres: {'C': 10, 'epsilon': 0.001, 'gamma': 'scale', 'kernel': 'linear'}
+Meilleurs paramètres: {'C': 10, 'epsilon': 0.1, 'gamma': 0.01, 'kernel': 'poly'}
+Meilleurs paramètres: {'C': 100, 'epsilon': 1, 'gamma': 0.01, 'kernel': 'rbf'}
+Meilleurs paramètres: {'C': 10, 'epsilon': 1, 'gamma': 'scale', 'kernel': 'linear'}
+Meilleurs paramètres: {'C': 100, 'epsilon': 0.001, 'gamma': 0.01, 'kernel': 'rbf'}
+Meilleurs paramètres: {'C': 0.1, 'epsilon': 1, 'gamma': 10, 'kernel': 'sigmoid'}
+Meilleurs paramètres: {'C': 0.1, 'epsilon': 0.01, 'gamma': 10, 'kernel': 'sigmoid'}
+Meilleurs paramètres: {'C': 1000, 'epsilon': 1, 'gamma': 0.001, 'kernel': 'rbf'}
+Meilleurs paramètres: {'C': 100, 'epsilon': 0.01, 'gamma': 0.001, 'kernel': 'sigmoid'}
+Meilleurs paramètres: {'C': 10, 'epsilon': 0.01, 'gamma': 'scale', 'kernel': 'linear'}
+Meilleurs paramètres: {'C': 10, 'epsilon': 0.001, 'gamma': 0.01, 'kernel': 'rbf'}
+Meilleurs paramètres: {'C': 1, 'epsilon': 0.1, 'gamma': 'auto', 'kernel': 'sigmoid'}
+Meilleurs paramètres: {'C': 1, 'epsilon': 0.1, 'gamma': 0.1, 'kernel': 'sigmoid'}
+Meilleurs paramètres: {'C': 100, 'epsilon': 0.001, 'gamma': 0.01, 'kernel': 'sigmoid'}
